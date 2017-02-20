@@ -96,6 +96,7 @@ EOF
 #-------------------------------------------------------------------------------
 
 #mpirun -np $nproc ./masnum.wam.mpi > out.qrunout
+bsub -I -n 40  -q q_sw_expr -sw3runarg "-P master -f" -share_size 6000 -host_stack 1024 -b -m 1 -o out.qrunout ./masnum.wam.mpi
 
 #-------------------------------------------------------------------------------
 

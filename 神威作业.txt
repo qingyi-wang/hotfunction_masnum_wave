@@ -4,4 +4,4 @@
 4.6430445  2017年2月20日16:38:42
 
 
-// 运用gprof热点函数追踪 --sw3runarg="-p –f"
+// 运用gprof热点函数追踪 -sw3runarg "-P master -f"
