@@ -14,7 +14,7 @@
   integer :: j, k, i, iyyz, ixx, jyy, ixx1, jyy1, iwk, iwk1, i1, jth, jth1
   real :: x0, y0, d0, dddx0, dddy0, duxdx0, duxdy0, duydy0, duydx0, th0
 !  real :: sinth, costh, deltt, wk0, ws0, dk0, cg, cgx, cgy, delts, wecs
-  real :: sinth, costh, wk0, ws0, dk0, cg, cgx, cgy 
+  real :: sinth, costh, wk0, ws0, dk0, cg, cgx, cgy
   !angx_d, angy_d, , delts, radx_d, rady_d, wecs
   real :: xx, yy, x1, x2, y1, y2, dsidd
   real :: ssr1, ssr2, ssrwk, ssrth, wks, fien, fien1, wk1, wk2, dtth0, ths
@@ -23,7 +23,7 @@
   real :: th1, th2, exxyy, x_d, y_d
 
   real :: dx, dy
-  
+
   integer :: iii
 
 !-------------------------------------------------------------------------------
@@ -133,7 +133,7 @@
           endif
         enddo
         if(ixx < 1 .or. ixx > ixl)cycle
-        
+
         if(yy < y(iys))yy = y(iys)
         if(yy > y(iyl))yy = y(iyl)
         jyy = 0

@@ -29,7 +29,7 @@ set wind_path = ./forcing/
 
 set title      = "pac_ncep"    # --- Symbal for model output.
 set istime     = 20090101      # --- Integral start time
-set ietime     = 20090121      # --- Integral end time
+set ietime     = 20090105      # --- Integral end time
 set cools_days = 0             # --- The time (days) for cool start.
 set delttm     = 7.5           # --- Length of integral time step, in minutes.
                                # --- Maximum value is 7.5 in this example
