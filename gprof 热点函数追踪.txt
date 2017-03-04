@@ -1,6 +1,6 @@
-Each sample counts as 0.01 seconds.
-  %   cumulative   self              self     total           
- time   seconds   seconds    calls  Ts/call  Ts/call  name    
+﻿Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
  30.41   2706.86  2706.86                             PROPAGAT.in.WAMCOR_MOD
  11.69   3747.49  1040.62                             IMPLSCH.in.WAMCOR_MOD
   8.79   4529.81   782.32                             MPIDI_CH3I_MRAILI_Cq_poll_ib
@@ -224,3 +224,127 @@ Each sample counts as 0.01 seconds.
   0.00   8899.89     0.01                             SET_ICE.in.WAMCPL_MOD
   0.00   8899.90     0.01                             large_malloc
   0.00   8899.90     0.01                             wamvar_mod_
+
+
+2017年2月25日20:41:41
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
+ 19.63    267.80   267.80                             PROPAGAT.in.WAMCOR_MOD
+ 13.87    457.09   189.29                             MPIDI_CH3I_MRAILI_Cq_poll_ib
+ 13.10    635.87   178.78                             mlx4_poll_cq
+ 11.04    786.54   150.67                             MPIDI_CH3I_Progress
+  8.17    897.96   111.42                             IMPLSCH.in.WAMCOR_MOD
+  4.20    955.21    57.25                             MPIDI_CH3I_read_progress
+  2.23    985.62    30.41                             __rmod
+  2.19   1015.47    29.85                             MPIDI_CH3I_MRAILI_Get_next_vbuf
+  2.09   1043.94    28.47                             INTER.in.WAMCOR_MOD
+  1.92   1070.10    26.16                             get_sw_cqe
+  1.92   1096.25    26.15                             MPIDU_Sched_progress_state
+  1.54   1117.20    20.95                             tanf
+  1.38   1136.06    18.86                             READWI_MPI.in.WAMMPI_MOD
+  1.30   1153.83    17.77                             MPIDI_CH3_VC_GetStateString
+  1.18   1169.96    16.13                             MEAN2.in.WAMCOR_MOD
+  0.91   1182.40    12.44                             pthread_spin_lock
+  0.90   1194.69    12.29                             MPIDU_Sched_progress
+  0.72   1204.57     9.88                             sinf
+  0.70   1214.10     9.53                             __rtand
+  0.69   1223.58     9.48                             cosf
+  0.68   1232.86     9.28                             MEAN1.in.WAMCOR_MOD
+  0.67   1241.94     9.08                             mlx4_alloc_buf
+  0.66   1250.97     9.03                             MPIDI_CH3I_MRAILI_Get_next_vbuf_local
+  0.65   1259.81     8.84                             MPID_Sched_cb2
+  0.64   1268.57     8.76                             pthread_spin_init
+  0.64   1277.30     8.73                             MPIDI_CH3I_MRAILI_Cq_poll_iwarp
+  0.64   1285.98     8.68                             utarray_str_dtor
+  0.63   1294.56     8.58                             mlx4_cq_clean
+  0.58   1302.47     7.91                             coshf
+  0.52   1309.53     7.06                             MPIDI_CH3I_MRAILI_Test_pkt
+  0.49   1316.17     6.64                             sinhf
+  0.46   1322.51     6.35                             get_cqe
+  0.44   1328.54     6.03                             r_cosd
+  0.36   1333.49     4.95                             MIXTURE_WIT.in.WAMCPL_MOD
+  0.24   1336.71     3.22                             INTACT.in.WAMCPL_MOD
+  0.20   1339.46     2.75                             isnanf
+  0.20   1342.18     2.72                             write
+  0.18   1344.65     2.47                             OUTPUT.in.WAMMPI_MOD
+  0.15   1346.73     2.08                             MIXTURE_LIMIT.in.WAMCPL_MOD
+  0.15   1348.78     2.05                             read
+  0.12   1350.48     1.70                             pthread_spin_unlock
+  0.11   1352.04     1.56                             expf
+  0.10   1353.37     1.33                             logf
+  0.10   1354.68     1.31                             TZ2
+  0.09   1355.88     1.20                             powf
+  0.08   1357.01     1.13                             UPDATE4D_SGLE.in.YMPI_MOD
+  0.07   1358.02     1.01                             sw5mc_exception
+  0.07   1358.95     0.93                             __TRIG_RDXF_TZ10
+  0.06   1359.75     0.80                             tanhf
+  0.06   1360.53     0.78                             MIXTURE.in.WAMCPL_MOD
+  0.04   1361.12     0.59                             r_mod
+  0.04   1361.63     0.51                             memcpy
+  0.03   1362.07     0.44                             SETSPEC.in.WAMCOR_MOD
+  0.03   1362.48     0.41                             __TRIG_RDXF_TZ10
+  0.03   1362.84     0.36                             TZ1
+  0.02   1363.07     0.23                             __powri
+  0.02   1363.29     0.22                             memset
+  0.01   1363.48     0.19                             open64
+  0.01   1363.58     0.10                             _Copyout
+  0.01   1363.65     0.07                             _getfpemode
+  0.00   1363.71     0.06                             DATENUM_DAYS.in.TIME_MOD
+  0.00   1363.77     0.06                             swapn4b
+  0.00   1363.82     0.05                             SET_PEBOX.in.YMPI_MOD
+  0.00   1363.86     0.04                             atan2f
+  0.00   1363.90     0.04                             fill_NC_var
+  0.00   1363.93     0.03                             _Copyin
+  0.00   1363.96     0.03                             _HTON
+  0.00   1363.99     0.03                             SETLAND_V3.in.WAMMPI_MOD
+  0.00   1364.02     0.03                             mlx4_post_recv
+  0.00   1364.04     0.02                             GET_WIND.in.WAMFIO_MOD
+  0.00   1364.06     0.02                             MPIC_Recv
+  0.00   1364.08     0.02                             TZ1
+  0.00   1364.10     0.02                             WAMVAR_MOD_INIT.in.WAMVAR_MOD
+  0.00   1364.12     0.02                             _fxstat
+  0.00   1364.14     0.02                             _xstat
+  0.00   1364.16     0.02                             pthread_mutex_lock
+  0.00   1364.18     0.02                             stamp_send_wqe
+  0.00   1364.20     0.02                             strncasecmp_l
+  0.00   1364.21     0.01                             INIT_WAMCPL.in.WAMCPL_MOD
+  0.00   1364.22     0.01                             MPIDI_CH3I_MRAILI_Flush
+  0.00   1364.23     0.01                             MPIDI_CH3I_MRAILI_Process_rndv
+  0.00   1364.24     0.01                             MPIDI_CH3I_MRAIL_Parse_header
+  0.00   1364.25     0.01                             MPIDI_CH3I_MRAIL_Prepare_rndv
+  0.00   1364.26     0.01                             MPIDI_CH3I_Win_allocate_shm
+  0.00   1364.27     0.01                             MPIDI_CH3U_Post_data_receive_found
+  0.00   1364.28     0.01                             MPIDI_CH3U_Recvq_FDU_or_AEP
+  0.00   1364.29     0.01                             MPIDI_CH3_PktHandler_RndvClrToSend
+  0.00   1364.30     0.01                             MRAILI_Send_noop_if_needed
+  0.00   1364.31     0.01                             PMPI_Sendrecv
+  0.00   1364.32     0.01                             SETWAVE.in.WAMFIO_MOD
+  0.00   1364.33     0.01                             TZ16
+  0.00   1364.34     0.01                             _F90_DATE_AND_TIME
+  0.00   1364.35     0.01                             _IE_SCALB
+  0.00   1364.36     0.01                             _INQ
+  0.00   1364.37     0.01                             __divw
+  0.00   1364.38     0.01                             __pthread_mutex_unlock_usercnt
+  0.00   1364.39     0.01                             __ratn2d
+  0.00   1364.40     0.01                             _get_next_unit
+  0.00   1364.41     0.01                             _s2ui
+  0.00   1364.42     0.01                             _xfer_iolist
+  0.00   1364.43     0.01                             bcmp
+  0.00   1364.44     0.01                             cartesian_free
+  0.00   1364.45     0.01                             close
+  0.00   1364.46     0.01                             deregister_memory
+  0.00   1364.47     0.01                             handle_read_individual
+  0.00   1364.48     0.01                             large_malloc
+  0.00   1364.49     0.01                             mlx4_post_send
+  0.00   1364.50     0.01                             mpi_waitall_
+  0.00   1364.51     0.01                             post_send
+  0.00   1364.52     0.01                             putNCvx_float_long
+  0.00   1364.53     0.01                             px_pgout
+  0.00   1364.54     0.01                             utarray_str_dtor
+  0.00   1364.55     0.01                             utarray_str_dtor
+  0.00   1364.56     0.01                             v1h_put_size_t
+  0.00   1364.57     0.01                             DATEVEC0.in.TIME_MOD
+  0.00   1364.57     0.01                             DATEVEC1.in.TIME_MOD
+  0.00   1364.58     0.01                             mlx4_store_qp
+  0.00   1364.58     0.01                             wq_overflow

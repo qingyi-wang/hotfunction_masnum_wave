@@ -3,7 +3,7 @@
 !-------------------------------------------------------------------------------
 !*DeckYinxq: propagat
 
-  subroutine p ropagat
+  subroutine propagat
 
 !-------------------------------------------------------------------------------
 
@@ -14,7 +14,7 @@
   integer :: j, k, i, iyyz, ixx, jyy, ixx1, jyy1, iwk, iwk1, i1, jth, jth1
   real :: x0, y0, d0, dddx0, dddy0, duxdx0, duxdy0, duydy0, duydx0, th0
 !  real :: sinth, costh, deltt, wk0, ws0, dk0, cg, cgx, cgy, delts, wecs
-  real :: sinth, costh, wk0, ws0, dk0, cg, cgx, cgy
+  real :: sinth, costh, wk0, ws0, dk0, cg, cgx, cgy 
   !angx_d, angy_d, , delts, radx_d, rady_d, wecs
   real :: xx, yy, x1, x2, y1, y2, dsidd
   real :: ssr1, ssr2, ssrwk, ssrth, wks, fien, fien1, wk1, wk2, dtth0, ths
@@ -23,7 +23,7 @@
   real :: th1, th2, exxyy, x_d, y_d
 
   real :: dx, dy
-
+  
   integer :: iii
 
 !-------------------------------------------------------------------------------
@@ -69,15 +69,14 @@
     duydx0=uyx(ia,ic)
     duydy0=uyy(ia,ic)
 
+!加入的众核代码
+
     do 200 j=1,jl
       th0=thet(j)
       sinth=sin(th0)
       costh=cos(th0)
       !      sinth=sinth0(j)
       !      costh=costh0(j)
-
-      ！加入的众核加速代码
-      !$ACC PARALLEL LOOP
       do 500 k=1,kl
 !yinxq:        deltt=delttm*60.
         wk0=wk(k)
@@ -131,28 +130,29 @@
         endif
         ixx = 0
 
-!$ACC PARALLEL LOOP packin(iii,ixs,ixl)copyin(xx)copyout(ixx)
-                do iii = ixs, ixl-1
-                  if(xx >= x(iii) .and. xx <= x(iii+1))then
-                  	ixx = iii; exit
-                  endif
-                enddo
+!$ACC PARALLEL LOOP packin(iii,ixs,ixl)copyin(xx)copyout(ixx)  
+        do iii = ixs, ixl-1
+          if(xx >= x(iii) .and. xx <= x(iii+1))then
+          	ixx = iii; exit
+          endif
+        enddo
 !$ACC END PARLLEL
 
 
-                if(ixx < 1 .or. ixx > ixl)cycle
+        if(ixx < 1 .or. ixx > ixl)cycle
+        
+        if(yy < y(iys))yy = y(iys)
+        if(yy > y(iyl))yy = y(iyl)
+        jyy = 0
 
-                if(yy < y(iys))yy = y(iys)
-                if(yy > y(iyl))yy = y(iyl)
-                jyy = 0
-
-!$ACC PARALLEL LOOP packin(iii,iys,iyl)copyin(yy)copyout(jyy)
-                do iii = iys, iyl-1
-                  if(yy >= y(iii) .and. yy <= y(iii+1))then
-                  	jyy = iii; exit
-                  endif
-                enddo
+!$ACC PARALLEL LOOP packin(iii,iys,iyl)copyin(yy)copyout(jyy)   
+        do iii = iys, iyl-1
+          if(yy >= y(iii) .and. yy <= y(iii+1))then
+          	jyy = iii; exit
+          endif
+        enddo
 !$ACC END PARLLEL
+
 
         if(jyy < 0 .or. jyy > iyl)cycle
 
@@ -216,13 +216,12 @@
 
             !========   The following is modified by Yang Yongzeng =====c
 
-!$ACC PARALLEL LOOP copyin(iyyz)copyout(iwk)
+!$ACC PARALLEL LOOP copyin(iyyz)copyout(iwk)  
             do iyyz=1,kld
               if(wks.ge.wk(iyyz).and.wks.lt.wk(iyyz+1))iwk=iyyz
             enddo
-!$ACC END PARALLEL LOOP
-
-!iyyz是一个独立的变量，但传参出来的iwk在后面有关联
+!$ACC END PARALLEL LOOP 
+   
 
             iwk1=iwk+1
 !=====================================================================c
@@ -333,7 +332,7 @@
         !        write(6,*) e(k,j,ia,ic)
 
       500      continue
-      !$ACC END PARALLEL LOOP
+!$ACC END PARALLEL
     200      continue
   100      continue
 
