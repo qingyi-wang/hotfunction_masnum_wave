@@ -348,3 +348,65 @@ Each sample counts as 0.01 seconds.
   0.00   1364.57     0.01                             DATEVEC1.in.TIME_MOD
   0.00   1364.58     0.01                             mlx4_store_qp
   0.00   1364.58     0.01                             wq_overflow
+
+
+ %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 21.15   2954.46  2954.46                             PROPAGAT.in.WAMCOR_MOD
+ 13.05   4777.74  1823.29                             MPIDI_CH3I_MRAILI_Cq_poll_ib
+ 12.10   6468.02  1690.27                             mlx4_poll_cq
+ 11.05   8011.74  1543.72                             MPIDI_CH3I_Progress
+  8.77   9237.47  1225.72                             IMPLSCH.in.WAMCOR_MOD
+  3.86   9776.35   538.88                             MPIDI_CH3I_read_progress
+  2.33  10102.36   326.01                             __rmod
+  2.24  10415.37   313.01                             INTER.in.WAMCOR_MOD
+  2.07  10704.07   288.70                             MPIDI_CH3I_MRAILI_Get_next_vbuf
+  1.83  10960.38   256.31                             MPIDU_Sched_progress_state
+  1.76  11206.34   245.96                             get_sw_cqe
+  1.63  11434.49   228.15                             tanf
+  1.47  11640.52   206.03                             READWI_MPI.in.WAMMPI_MOD
+  1.27  11818.25   177.73                             MEAN2.in.WAMCOR_MOD
+  1.19  11985.06   166.81                             MPIDI_CH3_VC_GetStateString
+  0.87  12106.69   121.63                             MPIDU_Sched_progress
+  0.85  12225.91   119.22                             pthread_spin_lock
+  0.75  12330.11   104.20                             sinf
+  0.74  12434.19   104.08                             cosf
+  0.71  12533.52    99.33                             MEAN1.in.WAMCOR_MOD
+  0.71  12632.54    99.02                             __rtand
+  0.62  12719.28    86.74                             pthread_spin_init
+  0.61  12804.90    85.62                             coshf
+  0.61  12890.00    85.10                             MPID_Sched_cb2
+  0.60  12974.52    84.52                             MPIDI_CH3I_MRAILI_Get_next_vbuf_local
+  0.60  13058.98    84.46                             mlx4_cq_clean
+  0.60  13143.30    84.32                             mlx4_alloc_buf
+  0.60  13227.20    83.90                             utarray_str_dtor
+  0.59  13310.23    83.03                             MPIDI_CH3I_MRAILI_Cq_poll_iwarp
+  0.53  13384.54    74.31                             sinhf
+  0.49  13452.76    68.22                             MPIDI_CH3I_MRAILI_Test_pkt
+  0.47  13518.36    65.60                             r_cosd
+  0.42  13576.70    58.34                             get_cqe
+  0.40  13633.17    56.47                             MIXTURE_WIT.in.WAMCPL_MOD
+  0.26  13669.69    36.52                             INTACT.in.WAMCPL_MOD
+  0.23  13702.44    32.75                             isnanf
+  0.20  13730.21    27.77                             OUTPUT.in.WAMMPI_MOD
+  0.18  13755.98    25.77                             write
+  0.17  13779.71    23.73                             MIXTURE_LIMIT.in.WAMCPL_MOD
+  0.16  13801.71    22.00                             read
+  0.12  13819.04    17.33                             pthread_spin_unlock
+  0.12  13836.05    17.01                             expf
+  0.11  13850.96    14.91                             logf
+  0.09  13863.84    12.88                             TZ2
+  0.09  13876.10    12.26                             UPDATE4D_SGLE.in.YMPI_MOD
+  0.08  13887.94    11.84                             powf
+  0.08  13899.00    11.06                             sw5mc_exception
+  0.08  13909.57    10.57                             __TRIG_RDXF_TZ10
+  0.07  13918.97     9.40                             r_mod
+  0.07  13928.22     9.25                             tanhf
+  0.06  13936.41     8.19                             MIXTURE.in.WAMCPL_MOD
+  0.04  13941.67     5.26                             memcpy
+  0.03  13945.96     4.29                             __TRIG_RDXF_TZ10
+  0.03  13950.07     4.11                             SETSPEC.in.WAMCOR_MOD
+  0.03  13954.14     4.08                             TZ1
+  0.02  13956.83     2.69                             __powri
+  0.01  13958.81     1.98                             open64
+  0.01  13959.83     1.02                             memset
